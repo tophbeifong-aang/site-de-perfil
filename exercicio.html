@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilo.css">
+    <title>Laura Antunes</title>
+</head>
+<body>
+    <header>
+        <h1>Laura Antunes</h1>
+        <p>Sou técnica em informática</p>
+        <button id="modo-escuro">Dark Mode</button>
+    </header>
+    <main>
+        <section class="perfil-container"> 
+            <div class="Detalhes">
+                <h2>Detalhes</h2>
+                <ul>
+                    <li>Nome:</li>
+                    <p>Laura Antunes</p>
+                    <li>Idade:</li>
+                    <p>16 anos</p>
+                    <li>Local:</li>
+                    <p>Joanópolis, Brasil</p>
+                </ul>
+                <div class="social-icons">
+                    <img class="icons" src="imagens/facebook.png" alt="Facebook">
+                    <img class="icons" src="imagens/instagram.jpg" alt="Instagram">
+                    <img class="icons" src="imagens/linkedin.png" alt="LinkedIn">
+                </div>
+            </div>
+            <div class="sobre">
+                <h2>Sobre mim</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis neque deleniti dicta ullam aspernatur dolores doloremque, non pariatur laborum maxime ex ducimus voluptatem magni, illum impedit earum blanditiis molestiae debitis.</p>
+                <button class="contate-me"><strong>Contate-me</strong></button>
+            </div>
+            <div class="descrição">
+                <img id="eu" src="eu.jpg" alt="Laura">
+                <h3>Olá, eu sou a Laura</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed ipsam iusto eaque. Autem ipsam iure placeat consequatur reprehenderit nobis natus praesentium delectus quasi animi laborum corporis rem, nisi vero mollitia!</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 - Todos os direitos reservados</p>
+    </footer>
+    <script>
+        const botao = document.getElementById("modo-escuro");
+        const imagem = document.getElementById("eu");
+
+        botao.addEventListener("click", () => {
+            const temaAtual = document.documentElement.getAttribute("data-theme");
+
+            if (temaAtual === "dark") {
+                document.documentElement.removeAttribute("data-theme");
+                imagem.src = "eu.jpg";
+            } else {
+                document.documentElement.setAttribute("data-theme", "dark");
+                imagem.src = "eu.jpg"; // Certifique-se de ter esta imagem
+            }
+        });
+    </script>
+</body>
+</html>
